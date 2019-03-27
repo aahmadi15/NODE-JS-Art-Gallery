@@ -1,0 +1,18 @@
+.imageStuff {
+    margin:auto;
+    left: 50%;
+    position:absolute;
+}
+
+#Create{
+    margin:auto;
+    right : 80%;
+    position:absolute;
+}
+
+img{
+    width: 200px;
+}
+h1{
+    text-align:center;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset = "UTF-8"/>
+    <title>
+        Art Gallery
+    </title>
+
+    <link href = "./css/Assignment.css" rel = "stylesheet">
+
+
+    <script>
+        function leave()
+        {
+            document.getElementById("login").action = "/logout";
+             document.getElementById("login").submit();
+       }
+
+    function redirect()
+    {
+        document.getElementById("login").action = "/buy";
+        document.getElementById("login").submit();
+    }
+
+    function sbmbtn()
+    {
+        document.getElementById("login").action = "/animals";
+        document.getElementById("login").submit();
+    }
+    </script>
+    </head>
+
+    <body>
+        <form id = "login" method = "post" ondblClick = "redirect();" action = "/animals">
+        <h1> Saboor Ahmadi</h1>
+        <div class = "picSelect">
+        <select name = "seleSaboorAhmadi">
+            <option value = "Cheetah">Cheetah</option>
+
+            <option value = "Elk">Elk</option>
+
+            <option value = "Giraffe">Giraffe</option>
+
+            <option value = "Hyena">Hyena</option>
+
+            <option value = "Lion">Lion</option>
+
+        </select>
+        <br/> </br>
+        <button type = "submit" onclick = "sbmbtn();" value = "submit">Submit</button>
+        </div>
+
+        <div class = "imageStuff">
+           <img src= "/images/{{data.images}}" alt="no image available" /> 
+           <div class="imgTitle">
+            {{data.imageName}}
+        </div>
+        </div>
+
+        <button  id = "logout" type = "submit" onclick = "leave();" value = "Logout">Logout</button>
+
+
+        <div id = "user">
+            {{data.user}}
+        </div>
+        </form>
+
+    </body>
+    </html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset = "UTF-8"/>
+    <title>
+        Create User
+    </title>
+
+    <link rel = "stylesheet" href = "./css/Assignment.css"/>
+    
+    <script>
+
+
+    </script>
+
+</head>
+
+<body>
+    <form id = "Create" method="POST" action = "/create">
+        <h1>Please Create a UserName and Password</h1>
+
+        <div class = "createUser">
+            <h3>Create</h3>
+            
+            <br />
+            <label>Create Username</label>
+            <input id = "userName" name = "userName" type = "text" required placeholder = "Create Username"/>
+            <br />
+            <label>Create Password</label>
+            <input id = "password" name = "password" type = "password" required placeholder = "Create Password"/> 
+            <div>{{data.err}}</div>
+            <br />
+            <button id = "login" type = "submit" value = "submit">Create</button>
+        </div>      
+    </form>
+</body>

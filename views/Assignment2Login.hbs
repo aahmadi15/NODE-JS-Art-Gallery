@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <meta charset = "UTF-8" />
+        <title>WEB322 Login Gallery</title>
+        <link rel = "stylesheet" href = "./css/Assignment.css"/>
+
+        <script>
+            function create()
+        {
+            document.getElementById("log").action = "/create";
+            document.getElementById("log").submit();
+        }
+        </script>
+        
+    </head>
+
+<body>
+
+    <form id = "log" method = "post" action = "/">
+
+        <h1>Saboor Ahmadi</h1>
+    
+        <div class = "saboorLoginContent">
+            <h3>Login</h3>
+            
+            <br />
+            <label>Username</label>
+            <input id = "userName" name = "userName" type = "text" required placeholder = "Username"/>
+            <br />
+            <label>Password</label>
+            <input id = "password" name = "password" type = "password" required placeholder = "Password"/> 
+            <div>{{data.err}}</div>
+            <br />
+            <button id = "login" type = "submit" value = "submit">Submit</button>
+            <br/>
+
+            <button id = "Create" onclick = "create()" type = "submit" value = "submit">Create a username and Password</button>
+        </div>      
+    </form>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "Assignment 2 ",
+  "main": "Assignment2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Saboor Ahmadi",
+  "license": "ISC",
+  "dependencies": {
+    "client-sessions": "^0.8.0",
+    "cookie-parser": "^1.4.3",
+    "cookieparser": "^0.1.0",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "mongodb": "^2.2.36",
+    "qs": "^6.5.1",
+    "randomstring": "^1.1.5"
+  },
+  "devDependencies": {}
+}

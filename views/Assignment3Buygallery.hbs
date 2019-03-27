@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset = "UTF-8"/>
+    <title>
+        Creating New Order and Purchase Web Page
+    </title>
+    <link rel = "stylesheet" href = "./css/Assignment.css">
+    <script>
+        function buy()
+        {
+            document.getElementById("gallerySele").action = "/bought";
+            document.getElementById("gallerySele").submit();
+        }
+
+        function cancel()
+        {
+            document.getElementById("gallerySele").action = "/cancel";
+            document.getElementById("gallerySele").submit();
+        }
+    </script>
+</head>
+
+<body>
+    <form id = "gallerySele" method = "post" action = "/buy">
+    <div class = "buyImg"> 
+    <img src = "/images/{{data.images}}" alt = "No Image"/>
+    </div>
+
+    <div class = "description">
+        {{data.description}}</div>
+
+    <div class = "price">
+        {{data.price}}</div>
+
+    <div class = "Status">
+        {{data.Status}}</div>
+        </br>
+    <div {{data.mess}}></div>
+    <div {{data.mes}}></div>
+
+    <button id = "buy" type = "submit" onclick = "buy();" value = "buy">Buy</button>
+    <button id = "cancel" type = "submit" onclick = "cancel();" value = "cancel">Cancel</button>
+    </form>
+</body> 
+</html>
